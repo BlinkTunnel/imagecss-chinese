@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 8]>
+<html class="ie" dir="ltr" lang="en-US">
+<![endif]-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8" />
+<meta name="description" content="一个使用CSS给背景图片定位的入门指南。" />
+<meta name="keywords" content="css, image, align, float, images, html" />
+<title>背景图片以及它们的显示原理 | imageCSS.com</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="style1.css" />
+
+<!-- HTML5 enabling script for older IE -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+</head>
+
+<body class="home page page-id-42 page-template page-template-fullwidth-php two-columns content-sidebar">
+
+	<div id="site-nav-wrap" class="clearfix">
+		<div id="site-nav-container">
+						<a href="index.html" id="home-btn">Home</a>
+						
+			<nav id="site-nav">
+				<div class="menu-imagecss-container"><ul id="menu-imagecss" class="menu"><li id="menu-item-60" class="menu-item menu-item-type-custom 
+
+menu-item-object-custom menu-item-60"><a href="background.html">background</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></div>						</nav><!-- end #site-nav -->
+		</div><!-- end #site-nav-container -->
+	</div><!-- end #site-nav-wrap -->
+
+	
+<div id="wrap" class="clearfix">
+		
+<header id="header">
+			
+<div id="branding">
+				
+<div id="site-title">
+											
+<h1><a href="index.html" title="imageCSS">imageCSS <span class="zh_title">中文版</span></a></h1>
+						
+<h2 id="site-description">做你图片的掌控者</h2>
+									
+</div><!-- end #site-title -->
+							
+</div><!-- end #branding -->
+		
+</header><!-- end #header -->
+	
+<div id="content">
+
+				
+			
+<article id="post-102" class="post-102 page type-page status-publish hentry">
+
+	<header class="entry-header">
+		<h1 class="entry-title">背景图片以及它们的显示原理</h1>
+	</header><!-- end .entry-header -->
+
+<div class="entry-content clearfix">
+
+	
+<p>想要一张图片作为背景展现只需要一行代码...</p>
+
+<p><pre>background-image:url('image.png')</pre></p>
+
+<p>这行代码的意思是“这是我的背景图片，显示它。”这行代码可以放在你的HTML文件或者CSS文件内，这是推荐的方法。</p>
+<p>下面是一些形象的例子用来展示当我们使用这行代码时，背景图片会怎样显示，同时我们通过在代码中添加其他东西，来让它以不同的方式显示。在这些例子中我们将使用一张蜜蜂的图片。这就是我们使用的图片...</p>
+<img src="images/center-horizontal.png" />
+<p>下面我们将看到当我们用相同的一只蜜蜂作为背景时它会怎么样。<p>
+
+<h3>默认的背景图片设置（缺省设置） - repeat（重复）</h3>
+<br />
+<img src="images/background-image-default.png" />
+<p>如果我们只使用一行代码来显示一个空白HTML网页的背景图片...</p>
+<pre>
+body<br />
+{<br />
+background-image:url('image.png');<br />
+} 
+</pre>
+<p>由于默认设置，这张图片在垂直方向和水平方向都重复显示。看起来很奇怪，是吗？如果你想让它看起来不同一点，你需要在默认的那一行代码中加点东西。<p>
+<h2>background-repeat</h2>
+<p>background-repeat 属性决定图片<strong>如何</strong>显示。</p>
+
+<h3>no-repeat - 让你的背景图片只显示一次（无重复）。</h3>
+<br />
+<img src="images/no-repeat.png" />
+<p>一个常用的地方是，当这张背景图片是一个图标（logo），只需要出现一次同时呆在那里不动。为了做到这一点我们需要告诉这张图片不要重复显示它自己。这就是“ no-repeat ”，代码是这样的...</p>
+<pre>
+body<br />
+{<br />
+background-image:url('image.png');<br />
+background-repeat:no-repeat;<br />
+} 
+</pre>
+<p>于是图片只显示一次了。图片以它的原始大小显示在页面的左上角。</p>
+
+<h3>repeat-x - 在水平方向上重复显示背景图片。</h3>
+<br />
+<img src="images/repeat-x.png" />
+<p>有些时候你想要在水平方向上重复你的图片。所以我们得告诉图片这样做。这就是“ repeat-x ”，代码是这样的...</p>
+<pre>
+body<br />
+{<br />
+background-image:url('image.png');<br />
+background-repeat:repeat-x;<br />
+} 
+</pre>
+<p>请注意，这种方法在使用非常小的图片来创建页面的顶部时非常普遍。如果你想要你的页面顶部有一个渐变色或者多种颜色的背景，你可以使用像这样的一张极细的小图片...</p>
+<img src="images/background.jpg" />
+<p>如果我们在水平方向上重复这张图片，那么在网页的顶部就会有一个好看的渐变色背景。就像这样...</p>
+<img src="images/repeat-x-gradient.jpg" />
+<p>所有的这种效果都可以仅仅使用一张只有一个像素（1px）宽的图片来实现。这种方法非常好，因为图片需要一定的时间来加载，因此图片越小，它就可以越快显示出来。使用这种方法，你的网页的顶部将会更快速的显示出来。</p>
+
+<h3>repeat-y - 在垂直方向上重复背景图片。</h3>
+<br />
+<img src="images/repeat-y.png" />
+<p>有些时候你会需要在垂直方向上来重复显示图片。只需使用“ repeat-y ”，代码是这样的...
+<pre>
+body<br />
+{<br />
+background-image:url('image.png');<br />
+background-repeat:repeat-y;<br />
+} 
+</pre>
+
+<p>就像是水平重复图片一样，这种技术有时被用于使用小图片创建网页样式。如果你需要使用一张小图片来作为边栏和主要内容栏目的背景色...</p>
+<img src="images/bkgd.png" />
+<p>如果我们在垂直方向上重复这样一张图片，我们可以给我们的网页创建一个很好看的背景，象是这样...</p>
+<img src="images/vertical-bg-example.png" />
+<p>所有的颜色效果仅来自一张一个像素（1px）高的图片。记住，图片越小，它需要的加载时间越短。</p>
+<h3>inherit</h3>
+<p>继承（inherit）这一属性很简单的让背景图片采用和它的父级元素相同的显示方式。举个例子，如果你的body标签的背景图片只显示一次（no-repeat），然后任何时候你都可以在你网页的其他地方（比如sidebar）来使用inherit属性是它采用同一种显示方式。</p>
+<pre>
+body<br />
+{<br />
+background-image:url('image.png');<br />
+background-repeat:inherit;<br />
+} 
+</pre>
+<p>继承（inherit）在CSS中与在现实世界中拥有一样的意义。如果你从你的父母那里继承了一些东西，现在它就属于你的了。</p>
+
+<h2>background-attachment</h2>
+<p>背景附属（background-attachment）决定图片<strong>是否</strong>需要固定在原位，或者是跟随页面移动。</p>
+<h3>scroll - 默认（缺省）设置</h3>
+<p>默认的背景图片工作方式是，它会随页面滚动。如果你向下滚动一个页面，背景图片会跟随它滚动...<p>
+<iframe src="scroll.html" width="350px" height="200px"></iframe>
+<br />
+背景图片在默认设置里是跟随页面滚动的，所以你不一定要将它声明出来，但是如果你想要这样写，可以参考以下的代码...
+<pre>
+body<br />
+{<br />
+background-image:url('image.png');<br />
+background-repeat:no-repeat;<br />
+background-attachment:scroll;<br />
+} 
+</pre>
+<br />
+<h3>fixed - 背景图片会固定在一个地方</h3>
+<p>一张固定位置的背景图片不会跟随页面滚动。如果你向下滚动页面，背景图片依然可见...<p>
+<iframe src="fixed.html" width="350px" height="200px"></iframe>
+<br />
+创建一个固定位置的背景图片，你必须在CSS中声明出来，像下面这样...
+<pre>
+body<br />
+{<br />
+background-image:url('image.png');<br />
+background-repeat:no-repeat;<br />
+background-attachment:fixed;<br />
+} 
+</pre>
+<br />
+
+
+
+
+	</div><!-- end .entry-content -->
+
+
+		
+	</div><!-- end #content -->
+
+
+	<div id="sidebar" class="widget-area">
+
+				
+<aside id="text-2" class="widget widget_text">			
+<div class="textwidget">
+
+<h2>提示</h2>
+<p>所有在代码中出现的非中文文本描述内容的符号，均为英文符号，请注意</p>
+<br>
+<hr>
+<br>
+<p><strong>这样对于CSS项目快速，形象的解释，有助于你更好地理解它的所有部分。</strong></p>
+<h3>Image 标签:</h3>
+<p>快速的浏览一个图片标签的组成部分。
+<a href="tag.html">学习image标签</a></p>
+<h3>CSS box model:</h3>
+<p>怎样更好地使用padding,margin以及border属性？请看这里。
+<a href="box.html">CSS box model（盒模型）</a></p>
+<h3>背景图片:</h3>
+<p>一个简单的形象的背景图片定位入门。
+<a href="background.html">学习背景图片的有关内容。</a></p>
+<h3>Opacity（不透明度）:</h3>
+<p>怎么控制你的图片的不透明度，即使你不是很清楚什么是不透明度。
+<a href="opacity.html">学习不透明度的内容</a></p>
+
+<br>
+<hr>
+<br>
+<img style="float:right;margin:5px;" src="http://www.feedthebot.com/images/patrick-sexton.jpg" width=99 height=99 alt="Patrick Sexton"/>
+<p>By Patrick Sexton, who has been helping webmasters with the Google Webmaster Guidelines and other issues since 2005.</p>
+<p><a rel=author href="https://plus.google.com/u/0/115535413488555890288?rel=author">Patrick Sexton on Google+</a></p>
+
+
+
+
+</div>
+		
+	</div><!-- #sidebar .widget-area --> 
+	<footer id="footer" class="clearfix">
+
+		
+<div id="site-info">
+			
+<p>Written by <a rel="author" href="https://plus.google.com/u/0/115535413488555890288?rel=author">Patrick Sexton on Google+</a></p>
+<p>Translated by <a rel="author" href="http://www.gucheen.pro">GC.</a></p>	
+			
+<nav class="footer-nav">
+<ul id="menu-imagecss-1" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="http://imagecss.com/background/">background</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></nav>			<a href="background.html#site-nav-wrap" class="top">Top &#8593;</a>
+		</div><!-- end #site-info -->
+
+	</footer><!-- end #footer -->
+</div><!-- end #wrap -->
+
+
+
+</body>
+</html>

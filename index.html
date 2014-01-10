@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 8]>
+<html class="ie" dir="ltr" lang="en-US">
+<![endif]-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta charset="UTF-8" />
+<title>imageCSS 中文版 | 做你图片的掌控者</title>
+<meta name="description" content="让你的图片以你希望的方式显示在网站和博客上。还有简洁的解释和样例代码。" />
+<meta name="keywords" content="css, image, align, float, images, html" />
+
+<link rel="stylesheet" type="text/css" media="all" href="style1.css" />
+
+<!-- HTML5 enabling script for older IE -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+
+<link rel='canonical' href='index.html' />
+
+</head>
+
+<body class="home page page-id-42 page-template page-template-fullwidth-php two-columns content-sidebar">
+
+	<div id="site-nav-wrap" class="clearfix">
+		<div id="site-nav-container">
+						<a href="index.html" id="home-btn">Home</a>
+						
+			<nav id="site-nav">
+				<div class="menu-imagecss-container"><ul id="menu-imagecss" class="menu"><li id="menu-item-60" class="menu-item menu-item-type-custom 
+
+menu-item-object-custom menu-item-60"><a href="background.html">background</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></div>						</nav><!-- end #site-nav -->
+		</div><!-- end #site-nav-container -->
+	</div><!-- end #site-nav-wrap -->
+
+	
+<div id="wrap" class="clearfix">
+		
+<header id="header">
+			
+<div id="branding">
+				
+<div id="site-title">
+											
+<h1><a href="imagecss_default.html" title="imageCSS">imageCSS <span class="zh_title">中文版</span></a></h1>
+						
+<h2 id="site-description">做你图片的掌控者</h2>
+									
+</div><!-- end #site-title -->
+							
+</div><!-- end #branding -->
+		
+</header><!-- end #header -->
+	
+<div id="content" class="fullwidth">
+
+<article id="post-42" class="post-42 page type-page status-publish hentry">
+
+	
+	<div class="entry-content clearfix">
+		<div class="three-columns-one">
+<h2><a href="left.html" style="text-decoration:underline;">左浮动 / 左对齐</a></h2>
+<p><img style="float:left;margin:5px;" src="images/small-float-left.png" alt="float left" width="110" height="110" /></p>
+<p>想让你的图片靠左？没问题&#8230; 下面教你怎么做到它并且让它看起来非常神奇。</p>
+<pre>
+left { 
+    float: left; 
+    margin: 5px; 
+}
+</pre>
+</div>
+<div class="three-columns-one">
+<h2 style="text-align:center;"><a href="center.html" style="text-decoration:underline;">居中（水平）</a></h2>
+<p><img style="display:block;margin-left:auto;margin-right: auto;" src="images/small-center-horizontal.png" alt="center horizontal" width="110" 
+
+height="110" /><br />
+需要让你的图片呆在一个区域的中央（水平）？</p>
+<pre>
+center { 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+</pre>
+</div>
+<div class="three-columns-one last">
+<h2 style="text-align:right;"><a href="right.html" style="text-decoration:underline;">右浮动 / 右对齐</a></a></h2>
+<p><img style="float:right;" src="images/small-float-right.png" alt="float right" width="110" height="110" /></p>
+<p>或者想让你的图片靠右？也不是问题&#8230; 以下是方法，可以让它看起来不错。</p>
+<pre>
+right { 
+    float: right; 
+    margin: 5px; 
+}
+</pre>
+</div>
+<div class="three-columns-one">
+<h2><a href="top.html" style="text-decoration:underline;">对齐顶部</a></h2>
+<p><img style="vertical-align:top;" src="images/small-top-vertical.png" alt="top vertical" width="110" height="110" />紧靠顶部的文字。</p>
+<p> 将文字对齐一张图片的顶部。</p>
+<pre>top {
+vertical-align:top;
+}
+</pre>
+</div>
+<div class="three-columns-one">
+<h2><a href="middle.html" style="text-decoration:underline;">文本居中（水平）</a></h2>
+<p><img style="vertical-align:middle;margin:5px;" src="images/small-center-vertical.png" alt="center horizontal" width="110" height="110" />位于图片中部的文字。</p>
+<p> 将你的文字排列到一张图片的中部（垂直方向）。</p>
+<pre>
+middle {
+    vertical-align:middle;
+    margin: 5px;
+}
+</pre>
+</div>
+<div class="three-columns-one last">
+<h2><a href="bottom.html" style="text-decoration:underline;">对齐底部</a></h2>
+<p><img class="textbottom" src="images/small-bottom-vertical.png" alt="bottom vertical" width="110" height="110" />紧靠底部的文字。</p>
+<p> 让你的图片对齐一张图片的底部。</p>
+<pre>
+bottom {
+vertical-align:baseline;
+}
+</pre>
+</div>
+	
+</div><!-- end .entry-content -->
+
+	
+
+</article><!-- end post-42 -->
+			
+
+		
+	
+</div><!-- end #content .fullwidth -->
+
+ 
+	
+<footer id="footer" class="clearfix">
+
+		
+<div id="site-info">
+
+<p>Written by: <a rel="author" href="https://plus.google.com/u/0/115535413488555890288?rel=author">Patrick Sexton on Google+</a></p>
+<p>Translated by <a rel="author" href="http://www.gucheen.pro">GC.</a></p>	
+
+
+			
+<nav class="footer-nav">
+<ul id="menu-imagecss-1" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="http://imagecss.com/background/">background</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></nav>			<a href="index.html#site-nav-wrap" class="top">Top &#8593;</a>
+		</div><!-- end #site-info -->
+
+	</footer><!-- end #footer -->
+</div><!-- end #wrap -->
+
+
+<script type='text/javascript'>
+(function() {
+    var c = document.createElement('script'); 
+    c.type = 'text/javascript';
+    c.async = true;
+    c.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.clicki.cn/boot/48736';
+    var h = document.getElementsByTagName('script')[0];
+    h.parentNode.insertBefore(c, h);
+})();
+</script>
+</body>
+</html>

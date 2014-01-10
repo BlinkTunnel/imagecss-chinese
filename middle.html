@@ -1,0 +1,188 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 8]>
+<html class="ie" dir="ltr" lang="en-US">
+<![endif]-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8" />
+<meta name="description" content="怎么使用CSS把文字对齐到图片的中部。" />
+<meta name="keywords" content="css, image, align, float, images, html" />
+<title>怎样使图片垂直居中 | imageCSS.com</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="style1.css" />
+
+<!-- HTML5 enabling script for older IE -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="home page page-id-42 page-template page-template-fullwidth-php two-columns content-sidebar">
+
+	<div id="site-nav-wrap" class="clearfix">
+		<div id="site-nav-container">
+						<a href="index.html" id="home-btn">Home</a>
+						
+			<nav id="site-nav">
+				<div class="menu-imagecss-container"><ul id="menu-imagecss" class="menu"><li id="menu-item-60" class="menu-item menu-item-type-custom 
+
+menu-item-object-custom menu-item-60"><a href="background.html">background</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></div>						</nav><!-- end #site-nav -->
+		</div><!-- end #site-nav-container -->
+	</div><!-- end #site-nav-wrap -->
+
+	
+<div id="wrap" class="clearfix">
+		
+<header id="header">
+			
+<div id="branding">
+				
+<div id="site-title">
+											
+<h1><a href="index.html" title="imageCSS">imageCSS <span class="zh_title">中文版</span></a></h1>
+						
+<h2 id="site-description">做你图片的掌控者</h2>
+									
+</div><!-- end #site-title -->
+							
+</div><!-- end #branding -->
+		
+</header><!-- end #header -->
+	
+<div id="content">
+
+				
+			
+<article id="post-102" class="post-102 page type-page status-publish hentry">
+
+	<header class="entry-header">
+		<h1 class="entry-title">怎样将文字对齐图片的中央</h1>
+	</header><!-- end .entry-header -->
+
+<div class="entry-content clearfix">
+
+<p><img src="images/middle-align.png" class="textmiddle" alt="I am aligned to the middle! Woof!" title="I am aligned to the middle! Woof!" />Kibbles and Bits. Mmm.</p>
+<p>上面的这句话被对齐到了图片的中央（垂直方向）。为了达成这个效果，我们需要对CSS文件和image标签做一些小的修改，同时也要注意一下我们有多少空间可以使用。</p>
+<h3>CSS 部分</h3>
+<p>让我们在CSS文件中创建一个名为"middle"的类...</p>
+<pre>
+img.middle {<br />
+&#160;&#160;&#160;&#160;vertical-align:middle;<br />
+&#160;&#160;&#160;&#160;margin: 5px;<br />
+} 
+</pre>
+<br />
+
+<h3>image 标签部分</h3>
+<p>我们需要给对应的图片添加"middle"这个类...</p>
+<h5>CSS 代码:</h5>
+<pre>
+&lt;img src="images/yourimagefile.jpg" class="middle" /&gt;
+</pre>
+<br />
+<p>就是这样！（下面会详细说明这个方法）</p>
+<hr />
+<br />
+<h2>方法说明</h2><img src="images/explain.png" class="floatright" />
+
+<h3>如果你不确定要怎么做...</h3>
+<p>我们来详细地说明一下这种方法。</p>
+
+<h3>利用CSS将文字对齐到图片的中央（垂直方向）。</h3>
+<p>CSS文件中包含了你的网页以特定方式显示内容的依据。为了使用CSS，我们需要修改CSS文件和HTML文档。</p>
+
+<p>首先你需要更新CSS文件并且添加如下的代码...<p>
+<pre>
+img.middle {<br />
+&#160;&#160;&#160;&#160;vertical-align:middle;<br />
+&#160;&#160;&#160;&#160;margin: 5px;<br />
+} 
+</pre>
+<p>在CSS中这叫做创建一个"类"。当它被调用时将会指示你的网页怎样显示图片。在这里，这个特定的类名为"middle"。</p>
+<p>一旦你在CSS文件中添加了这个，你就要告诉图片使用哪个指令。找到那个image标签并且修改它，这样它就知道遵循哪个指令了...</p>
+<pre>
+&lt;img src="images/yourimagefile.jpg" class="middle" /&gt;<br />
+</pre>
+<p>在上面的代码中你可以看到我们添加了一个"类"，它的名字是"middle"。现在图片就知道从哪里得到指令了。</p>
+<p>一旦CSS文件和HTML中的iamge标签被更新了，紧靠着那张图片的文字就会被对齐到图片的中央（垂直方向）。</p>
+
+
+	</div><!-- end .entry-content -->
+
+
+		
+	</div><!-- end #content -->
+
+
+	<div id="sidebar" class="widget-area">
+
+				
+<aside id="text-2" class="widget widget_text">			
+<div class="textwidget">
+
+<h2>提示</h2>
+<p>所有在代码中出现的非中文文本描述内容的符号，均为英文符号，请注意</p>
+<br>
+<hr>
+<br>
+<p><strong>这样对于CSS项目快速，形象的解释，有助于你更好地理解它的所有部分。</strong></p>
+<h3>Image 标签:</h3>
+<p>快速的浏览一个图片标签的组成部分。
+<a href="tag.html">学习image标签</a></p>
+<h3>CSS box model:</h3>
+<p>怎样更好地使用padding,margin以及border属性？请看这里。
+<a href="box.html">CSS box model（盒模型）</a></p>
+<h3>背景图片:</h3>
+<p>一个简单的形象的背景图片定位入门。
+<a href="background.html">学习背景图片的有关内容。</a></p>
+<h3>Opacity（不透明度）:</h3>
+<p>怎么控制你的图片的不透明度，即使你不是很清楚什么是不透明度。
+<a href="opacity.html">学习不透明度的内容</a></p>
+
+<br>
+<hr>
+<br>
+<img style="float:right;margin:5px;" src="http://www.feedthebot.com/images/patrick-sexton.jpg" width=99 height=99 alt="Patrick Sexton"/>
+<p>By Patrick Sexton, who has been helping webmasters with the Google Webmaster Guidelines and other issues since 2005.</p>
+<p><a rel=author href="https://plus.google.com/u/0/115535413488555890288?rel=author">Patrick Sexton on Google+</a></p>
+
+
+
+
+</div>
+		
+	</div><!-- #sidebar .widget-area --> 
+	<footer id="footer" class="clearfix">
+
+		
+<div id="site-info">
+			
+<p>Written by <a rel="author" href="https://plus.google.com/u/0/115535413488555890288?rel=author">Patrick Sexton on Google+</a></p>
+<p>Translated by <a rel="author" href="http://www.gucheen.pro">GC.</a></p>
+			
+<nav class="footer-nav">
+<ul id="menu-imagecss-1" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="http://imagecss.com/background/">background</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></nav>			<a href="middle.html#site-nav-wrap" class="top">Top &#8593;</a>
+		</div><!-- end #site-info -->
+
+	</footer><!-- end #footer -->
+</div><!-- end #wrap -->
+
+
+
+</body>
+</html>

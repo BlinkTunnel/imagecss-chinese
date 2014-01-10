@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<!--[if lte IE 8]>
+<html class="ie" dir="ltr" lang="en-US">
+<![endif]-->
+<html dir="ltr" lang="en-US">
+<!--<![endif]-->
+<head>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+<meta charset="UTF-8" />
+<meta name="description" content="CSS和HTML结合使图片浮动或者排列到左边。你忘了怎么做了吗？" />
+<meta name="keywords" content="css, image, align, float, images, html" />
+<title>怎样使图片浮动或者对齐到右边 | imageCSS.com</title>
+
+<link rel="stylesheet" type="text/css" media="all" href="style1.css" />
+
+<!-- HTML5 enabling script for older IE -->
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</head>
+
+<body class="home page page-id-42 page-template page-template-fullwidth-php two-columns content-sidebar">
+
+	<div id="site-nav-wrap" class="clearfix">
+		<div id="site-nav-container">
+						<a href="index.html" id="home-btn">Home</a>
+						
+			<nav id="site-nav">
+				<div class="menu-imagecss-container"><ul id="menu-imagecss" class="menu"><li id="menu-item-60" class="menu-item menu-item-type-custom 
+
+menu-item-object-custom menu-item-60"><a href="background.html">background</a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li id="menu-item-63" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li id="menu-item-64" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></div>						</nav><!-- end #site-nav -->
+		</div><!-- end #site-nav-container -->
+	</div><!-- end #site-nav-wrap -->
+
+	
+<div id="wrap" class="clearfix">
+		
+<header id="header">
+			
+<div id="branding">
+				
+<div id="site-title">
+											
+<h1><a href="index.html" title="imageCSS">imageCSS <span class="zh_title">中文版</span></a></h1>
+						
+<h2 id="site-description">做你图片的掌控者</h2>
+									
+</div><!-- end #site-title -->
+
+							
+</div><!-- end #branding -->
+		
+</header><!-- end #header -->
+	
+<div id="content">
+
+				
+			
+<article id="post-102" class="post-102 page type-page status-publish hentry">
+
+	<header class="entry-header">
+		<h1 class="entry-title">怎样使图片浮动或者对齐到右边</h1>
+	</header><!-- end .entry-header -->
+	
+	<div class="entry-content clearfix">
+		<p><img src="images/float-right.png" style="float:right;margin:8px;" alt="I am aligned left! Ribit." title="I am floating right! 
+
+Ribit." />要将一张图片放置到右边主要有两种方法。在下面会进一步描述。</p>
+<h3>第一种方法 &#8211; 修改image标签.</h3>
+<p>为了把图片放到右边（同时好看一点），你需要像下面这样修改你的image标签&#8230;</p>
+<pre>
+&lt;img src="image.jpg" style="float:right; margin: 5px;" /&gt;
+</pre>
+<p>就是这样！（下面会详细地说明这种方法）</p>
+<h3>第二种方法 &#8211; 使用CSS。</h3>
+<p>为了通过利用CSS使一张图片对齐到左边，我们需要有CSS和HTML两部分的代码&#8230;</p>
+<h5>CSS 代码:</h5>
+<pre>
+img.floatright { <br />
+&#160;&#160;&#160;&#160;float: right; <br />
+&#160;&#160;&#160;&#160;margin: 5px; <br />
+}<br />
+</pre>
+<p></p>
+<h5>HTML 代码:</h5>
+<pre>
+&lt;img src="images/yourimagefile.jpg" class="floatright" /&gt;<br />
+</pre>
+<p>就是这样！（这种方法也将在下面详细说明）</p>
+<hr />
+</p>
+<h2>方法说明</h2>
+<p><img src="images/explain.png" style="float:right;" /></p>
+<h3>如果你不确定要怎么做&#8230;</h3>
+<p>这里有关于上面这种方法的更详细的说明，我们会仔细地解释。</p>
+<h3>第一种方法 &#8211; 修改iamge标签</h3>
+<p>image标签是用来定义图片在网页上的显示方式的。它们一般是这样子的&#8230;</p>
+<p>
+<pre>
+&lt;img src="image.jpg" /&gt;<br />
+</pre>
+</p>
+<p>这段代码是告诉你的网页要显示一张图片同时标明它的存储位置。</p>
+<p>它没有定义其他一些图片可以采用的东西。为了改变你的图片的显示方式，我们需要在这段代码中添加一些其他东西。</p>
+<p>在上面，我们给图片添加了样式（style）。我们让它浮动到右边同时保留一个5像素的外边距（margin）。</p>
+<p>我们把它改成这样&#8230;</p>
+<pre>
+&lt;img src="image.jpg" style="float:right; margin: 5px;" /&gt;
+</pre>
+<p>如果你确实有兴趣，我们就来看一下一个image标签的每个部分所起的作用&#8230;</p>
+<p><img src="images/image-tag-left.png" /></p>
+<p>这种方法很简单的给image标签添加了样式元素，来达到将图片显示到右侧同时保留一些空白空间的效果。如果你需要在图片周围预留更大的空间，你可以把"5"改成"10"，这样你的图片和文字之间就会有更多的空间。</p>
+<h3>第二种方法 &#8211; 使用CSS。</h3>
+<p>一个CSS文件包括了你的网页依此来以某种特定方式显示元素的指令。为了使用CSS技术，我们必须修改CSS文件和HTML文档。</p>
+<p>首先你必须更新你的CSS文件并且添加如下的代码&#8230;
+<pre>
+img.floatright { <br />
+&#160;&#160;&#160;&#160;float: right; <br />
+&#160;&#160;&#160;&#160;margin: 5px; <br />
+}<br />
+</pre>
+<p>创建一个"类"。这是在这个类被调用时，指示你图片的显示方式。这个特别的类的名称是"floatright"，但是我们可以将它命名为任何我们希望的名称。类的名字是上边代码中挨着"."右边的东西。如果我们想要叫这个类"gumballs"，可以像这样修改&#8230;</p>
+<pre>
+img.gumballs { <br />
+&#160;&#160;&#160;&#160;float: right; <br />
+&#160;&#160;&#160;&#160;margin: 5px; <br />
+}<br />
+</pre>
+<p>无论如何，我们就叫它"floatright"因为这就是我们正在做的事。</p>
+<p>一旦你添加了这个到你的CSS文件中，你必须告诉图片要使用哪个指令。为了达到这个目的，找到你需要移动到右边的那个图片的image标签，然后修改一下它，这样它就知道要调用哪个指令了&#8230;</p>
+<pre>
+&lt;img src="images/yourimagefile.jpg" class="floatright" /&gt;<br />
+</pre>
+<p>在上边的代码中，你可以看见我们添加了一个"类"，它的名字是"floatright"。现在图片就知道从哪里得到指令了。</p>
+<p>一旦CSS文件和HTML的image标签更新了，这张图片就会出现在文字的右边。</p>
+
+	</div><!-- end .entry-content -->
+
+
+		
+	</div><!-- end #content -->
+
+
+	<div id="sidebar" class="widget-area">
+
+				
+<aside id="text-2" class="widget widget_text">			
+<div class="textwidget">
+
+
+<h2>提示</h2>
+<p>所有在代码中出现的非中文文本描述内容的符号，均为英文符号，请注意</p>
+<br>
+<hr>
+<br>
+<p><strong>这样对于CSS项目快速，形象的解释，有助于你更好地理解它的所有部分。</strong></p>
+<h3>Image 标签:</h3>
+<p>快速的浏览一个图片标签的组成部分。
+<a href="tag.html">学习image标签</a></p>
+<h3>CSS box model:</h3>
+<p>怎样更好地使用padding,margin以及border属性？请看这里。
+<a href="box.html">CSS box model（盒模型）</a></p>
+<h3>背景图片:</h3>
+<p>一个简单的形象的背景图片定位入门。
+<a href="background.html">学习背景图片的有关内容。</a></p>
+<h3>Opacity（不透明度）:</h3>
+<p>怎么控制你的图片的不透明度，即使你不是很清楚什么是不透明度。
+<a href="opacity.html">学习不透明度的内容</a></p>
+
+<br>
+<hr>
+<br>
+<img style="float:right;margin:5px;" src="http://www.feedthebot.com/images/patrick-sexton.jpg" width=99 height=99 alt="Patrick Sexton"/>
+<p>By Patrick Sexton, who has been helping webmasters with the Google Webmaster Guidelines and other issues since 2005.</p>
+<p><a rel=author href="https://plus.google.com/u/0/115535413488555890288?rel=author">Patrick Sexton on Google+</a></p>
+
+
+
+
+</div>
+		
+	</div><!-- #sidebar .widget-area --> 
+	<footer id="footer" class="clearfix">
+
+		
+<div id="site-info">
+			
+<p>Written by <a rel="author" href="https://plus.google.com/u/0/115535413488555890288?rel=author">Patrick Sexton on Google+</a></p>
+<p>Translated by <a rel="author" href="http://www.gucheen.pro">GC.</a></p>	
+			
+<nav class="footer-nav">
+<ul id="menu-imagecss-1" class="menu">
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-60"><a href="http://imagecss.com/background/">background</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="opacity.html">opacity</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="tag.html">image tag</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-63"><a href="box.html">css box</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64"><a href="about.html">about</a></li>
+</ul></nav>			<a href="right.html#site-nav-wrap" class="top">Top &#8593;</a>
+		</div><!-- end #site-info -->
+
+	</footer><!-- end #footer -->
+</div><!-- end #wrap -->
+
+
+
+</body>
+</html>
